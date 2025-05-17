@@ -1,0 +1,184 @@
+/* Container setup */
+.container {
+  background: transparent;
+  color: white;
+  font-family: "Geist Sans", sans-serif;
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 100000;
+}
+
+/* Hero section */
+.hero {
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.heroInner {
+  padding: 2rem;
+  border-radius: 12px;
+  background: linear-gradient(
+    to right,
+    rgba(208, 240, 255, 0.1),
+    rgba(0, 174, 255, 0.2)
+  );
+  backdrop-filter: blur(5px);
+}
+
+.profileImg {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 15px rgba(0, 174, 255, 0.4);
+}
+
+.title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.gradientText {
+  background: linear-gradient(to right, #2dd4ff, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  color: #ccc;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  font-size: 1.1rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.7); /* transparent dark background */
+  backdrop-filter: blur(12px);
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.navButton {
+  padding: 0.5rem 1.2rem;
+  border: 1px solid transparent;
+  color: #80d0ff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.navButton:hover {
+  border-color: #80d0ff;
+  background-color: rgba(128, 208, 255, 0.1);
+}
+
+/* Section setup */
+.section {
+  margin-top: 5rem;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+/* Card and grid styles */
+.grid2Col {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.columnCards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Card styles */
+.cardGlass,
+.cardHover {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.cardHover:hover {
+  background: linear-gradient(
+    to right,
+    rgba(0, 120, 255, 0.1),
+    rgba(255, 0, 255, 0.05)
+  );
+  border-color: rgba(0, 255, 255, 0.3);
+  transform: translateY(-5px);
+}
+
+/* Project cards */
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.projectCard {
+  background: rgba(255, 255, 255, 0.04);
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.projectCard:hover {
+  border-color: rgba(173, 216, 230, 0.2);
+  background: rgba(0, 0, 50, 0.2);
+  transform: translateY(-3px);
+}
+
+.projectCard h3 {
+  color: #e2e8f0;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.projectCard p {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+}
+
+.tags {
+  margin-top: 0.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tags span {
+  background: #1e293b;
+  color: #80d0ff;
+  padding: 0.3rem 0.6rem;
+  border-radius: 5px;
+  font-size: 0.75rem;
+}

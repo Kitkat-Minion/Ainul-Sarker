@@ -1,0 +1,126 @@
+// app/ainul/page.jsx (or pages/ainul.js if using pages directory)
+"use client";
+
+import styles from "./ainul.module.css";
+
+export default function Ainul() {
+  return (
+    <div className={styles.container}>
+      {/* Hero Section */}
+      <section className={styles.hero}>
+        <div className={styles.heroInner}>
+          <img src="/images/profile.png" alt="" className={styles.profileImg} />
+          <h1 className={styles.title}>
+            <span className={styles.gradientText}>Ainul Sarker</span>
+          </h1>
+          <p className={styles.subtitle}>
+            Ainul Haque is a full-stack developer and creative technologist,
+            passionate about building intuitive experiences, scalable software,
+            and cutting-edge AI tools.
+          </p>
+          <nav className={styles.navbar}>
+            {["Education", "Experience", "Projects", "Hobbies", "Contact"].map(
+              (section) => (
+                <a
+                  key={section}
+                  href={`#${section.toLowerCase()}`}
+                  className={styles.navButton}
+                >
+                  {section}
+                </a>
+              )
+            )}
+          </nav>
+        </div>
+      </section>
+
+      {/* Education Section */}
+      <section id="education" className={styles.section}>
+        <h2 className={styles.sectionTitle}>Education</h2>
+        <div className={styles.grid2Col}>
+          <div className={styles.cardGlass}>
+            <h3>BSc in Computer Science</h3>
+            <p>University of Knowledge, 2018 - 2022</p>
+          </div>
+          <div className={styles.cardGlass}>
+            <h3>Web Development Bootcamp</h3>
+            <p>Online - 2023</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Experience Section */}
+      <section id="experience" className={styles.section}>
+        <h2 className={styles.sectionTitle}>Experience</h2>
+        <div className={styles.columnCards}>
+          <div className={styles.cardHover}>
+            <h3>Frontend Developer</h3>
+            <p>XYZ Tech Solutions | 2022 - Present</p>
+          </div>
+          <div className={styles.cardHover}>
+            <h3>Intern - UI/UX</h3>
+            <p>Creative Agency | Summer 2021</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section id="projects" className={styles.section}>
+        <h2 className={styles.sectionTitle}>Projects</h2>
+        <div className={styles.projectGrid}>
+          {[
+            "Vocaro.ai",
+            "SketchToImage",
+            "HeyLuna.ai",
+            "PhotoFoxAI",
+            "AiStoryGen",
+            "Wordrocket.ai",
+          ].map((name, idx) => (
+            <div key={idx} className={styles.projectCard}>
+              <h3>{name}</h3>
+              <p>
+                Short description about what this project does and what tech
+                powers it.
+              </p>
+              <div className={styles.tags}>
+                <span>LLM</span>
+                <span>AI</span>
+                <span>Web</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Hobbies Section */}
+      <section id="hobbies" className={styles.section}>
+        <h2 className={styles.sectionTitle}>Hobbies</h2>
+        <div className={styles.columnCards}>
+          <div className={styles.cardHover}>
+            <h3>Photography</h3>
+            <p>Capturing moments with creative flair</p>
+          </div>
+          <div className={styles.cardHover}>
+            <h3>Chess</h3>
+            <p>Strategic play and problem-solving</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className={styles.section}>
+        <h2 className={styles.sectionTitle}>Contact</h2>
+        <div className={styles.columnCards}>
+          <div className={styles.cardHover}>
+            <h3>Email</h3>
+            <p>ainul@example.com</p>
+          </div>
+          <div className={styles.cardHover}>
+            <h3>LinkedIn</h3>
+            <p>linkedin.com/in/ainul</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
